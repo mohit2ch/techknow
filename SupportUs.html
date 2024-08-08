@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechKnow Foundation - Contact Us</title>
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        .header {
+            text-align: right;
+            background: #4CAF50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            position: relative;
+        }
+        .header h1 {
+            margin: 0;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .header .tagline {
+            font-size: 1rem;
+            font-weight: 400;
+            margin-top: 0rem;
+            margin-left: 17rem;
+            text-align: center;
+            flex-grow: 1;
+        }
+        .p3 {
+            font-family: "Lucida Console", "Courier New", monospace;
+        }
+        .nav {
+            background: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+        .nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            flex: 1;
+        }
+        .section {
+            margin-bottom: 2rem;
+        }
+        .section h2 {
+            color: #333;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 0.5rem;
+            margin-bottom: 1rem;
+        }
+        .footer {
+            background: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+			padding-top: 1rem;
+            width: 100%;
+        }
+        .logo {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            width: 120px;
+        }
+        #slider {
+            overflow: hidden;
+        }
+        #slider figure {
+            position: relative;
+            width: 150%;
+            margin: 10;
+            left: 20;
+            padding-left: 1px;
+            animation: 15s slider infinite;
+        }
+        #slider figure img {
+            float: left;
+            padding-left: 5px;
+            padding-right: 18px;
+            width: 50%;
+        }
+        #slider a {
+            position: relative;
+            display: inline-block;
+            width: 20%;
+            margin: 5px;
+            text-decoration: none;
+        }
+        #slider a img {
+            width: 100%;
+            vertical-align: middle;
+        }
+        #slider a .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s;
+            font-size: 1rem;
+            text-align: center;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        #slider a:hover .overlay {
+            opacity: 1;
+        }
+
+        @keyframes slider {
+            0% { left: 0; }
+            20% { left: 0; }
+            25% { left: -100%; }
+            45% { left: -100%; }
+        }
+		body {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        .header {
+            text-align: right;
+            background: #4CAF50;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 1rem;
+            position: relative; /* Ensure relative positioning for absolute logo */
+        }
+        .header h1 {
+            margin: 0; /* Remove default margin */
+            text-align: center; /* Center align the text */
+            flex-grow: 1; /* Allow the h1 to take up remaining space */
+        }
+        .nav {
+            background: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+        }
+        .nav a {
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        .nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        .container {
+            padding: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        .contact-info {
+            margin-top: 1.5rem;
+        }
+        .contact-info p {
+            margin: 0.5rem 0;
+        }
+        .logo {
+            position: absolute;
+            top: 0.5rem;
+            left: 0.5rem;
+            width: 120px; /* Adjust as necessary */
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .volunteer-btn {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.5rem 1rem;
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            border-radius: 15px;
+            text-decoration: none;
+            font-size: 1rem;
+        }
+        .volunteer-btn:hover {
+            background-color: #45a049;
+        }
+        .button {
+            position: relative;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+            padding-block: 0.5rem;
+            padding-inline: 1.25rem;
+            background-color: rgb(0 107 179);
+            border-radius: 9999px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #ffff;
+            gap: 10px;
+            font-weight: bold;
+            border: 3px solid #ffffff4d;
+            outline: none;
+            overflow: hidden;
+            font-size: 15px;
+            text-decoration: none; /* Added to ensure the text is not underlined */
+            margin-top: 1rem; /* Add margin-top to separate from the previous text */
+        }
+
+        .icon {
+            width: 24px;
+            height: 24px;
+            transition: all 0.3s ease-in-out;
+        }
+
+        .button:hover {
+            transform: scale(1.05);
+            border-color: #fff9;
+        }
+
+        .button:hover .icon {
+            transform: translate(4px);
+        }
+
+        .button:hover::before {
+            animation: shine 1.5s ease-out infinite;
+        }
+
+        .button::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 100%;
+            background-image: linear-gradient(
+                120deg,
+                rgba(255, 255, 255, 0) 30%,
+                rgba(255, 255, 255, 0.8),
+                rgba(255, 255, 255, 0) 70%
+            );
+            top: 0;
+            left: -100px;
+            opacity: 0.6;
+        }
+
+        @keyframes shine {
+            0% {
+                left: -100px;
+            }
+
+            60% {
+                left: 100%;
+            }
+
+            to {
+                left: 100%;
+            }
+        }
+
+        .apply {
+            display: block;
+            margin-top: 1rem;
+			margin-right: 62rem;
+        }
+
+        .apply p {
+            margin: 0;
+            font-weight: bold;
+        }
+		.btn-donate {
+  --clr-font-main: hsla(0 0% 20% / 100);
+  --btn-bg-1: hsla(194 100% 69% / 1);
+  --btn-bg-2: hsla(217 100% 56% / 1);
+  --btn-bg-color: hsla(360 100% 100% / 1);
+  --radii: 0.5em;
+  cursor: pointer;
+  padding: 0.9em 1.4em;
+  min-width: 120px;
+  min-height: 44px;
+  font-size: var(--size, 1rem);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  font-weight: 500;
+  transition: 0.8s;
+  background-size: 280% auto;
+  background-image: linear-gradient(325deg, var(--btn-bg-2) 0%, var(--btn-bg-1) 55%, var(--btn-bg-2) 90%);
+  border: none;
+  border-radius: var(--radii);
+  color: var(--btn-bg-color);
+  box-shadow: 0px 0px 20px rgba(71, 184, 255, 0.5), 0px 5px 5px -1px rgba(58, 125, 233, 0.25), inset 4px 4px 8px rgba(175, 230, 255, 0.5), inset -4px -4px 8px rgba(19, 95, 216, 0.35);
+}
+
+.btn-donate:hover {
+  background-position: right top;
+}
+
+.btn-donate:is(:focus, :focus-visible, :active) {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--btn-bg-color), 0 0 0 6px var(--btn-bg-2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-donate {
+    transition: linear;
+  }
+}
+/* Style for the popup background */
+    .popup-background {
+      display: none; /* Hidden by default */
+      position: fixed; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      background-color: rgba(0,0,0,0.5); /* Semi-transparent background */
+      z-index: 1; 
+    }
+    /* Style for the popup content */
+    .popup-content {
+      position: relative;
+      background-color: white;
+      margin: 15% auto; /* 15% from top and centered */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%; /* Could be more or less, depending on screen size */
+      z-index: 2; 
+    }
+    /* Style for the close button */
+    .close-button {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    .close-button:hover,
+    .close-button:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    /* Style for the logo */
+    .bank-logo {
+      display: block;
+      margin: 0 auto 20px auto;
+      max-width: 100px;
+    }
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="C:\Users\HIREFEST\Desktop\Website\New Files\LOGO (1).png" alt="TechKnow Foundation Logo" class="logo">
+        <div>
+            <h1>TechKnow Foundation</h1>
+            <div class="tagline p3"><strong>Igniting minds, Empowering lives</strong></div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        <a href="Projects.html">Projects</a>
+        <a href="Contact Us.html">Contact Us</a>
+        <a href="Support Us.html">Support</a>
+    </div>
+		<div class="container">
+        <div class="contact-info" id="contact">
+            <h1>Support Us</h1>
+			<h2>            Become a Volunteer with us</h2>
+            <h4>Volunteers are the heart and soul of our organisation.  Their time, talent, and passion are critical for achieving success. Volunteers offer cost-effective support by taking on various tasks, freeing up staff for core functions. They also bring a wealth of skills and experience from diverse backgrounds, enhancing the organization's capabilities and fostering innovation. Additionally, volunteers act as community champions, raising awareness and strengthening the organization's connection with the community.</h4>                                                                                      </p>
+			<p><strong>If you are interested in Volunteering in our organisation, please click below:</strong></p>	
+		</div>
+		<div class="apply">
+            
+            <a href="https://forms.gle/FAPtfdAygKgqdDdF7" target="_blank" class="button">
+                Apply Now
+                <svg fill="currentColor" viewBox="0 0 24 24" class="icon">
+                    <path clip-rule="evenodd" d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25zm4.28 10.28a.75.75 0 000-1.06l-3-3a.75.75 0 10-1.06 1.06l1.72 1.72H8.25a.75.75 0 000 1.5h5.69l-1.72 1.72a.75.75 0 101.06 1.06l3-3z" fill-rule="evenodd"></path>
+                </svg>
+            </a>
+        </div>
+		<div class="contact-info" id="contact">
+            <h1>Let's Care Each other</h1>
+			<h2>Donate Us</h2>
+            <p><strong>Empower communities through technology with your support! TechKnow Foundation provides tech education, resources, and tools to underserved communities. Your donations fund educational programs, support innovative local solutions, and enhance access to technology. 
+			</p>Donate online, become a monthly donor, sponsor a program, or partner with us. Together, let's create a brighter future through techknow foundation!</a></p>
+            <!<button class="btn-donate">
+    <!Donate now>
+	<button onclick="openPopup()">Donate Us</button>
+
+<div id="popup" class="popup-background">
+  <div class="popup-content">
+    <span class="close-button" onclick="closePopup()">&times;</span>
+    <img src="C:\Users\techk\OneDrive\Desktop\New Files\SBI-Logo.png" alt="SBI Bank Logo" class="bank-logo">
+    <h3>Bank Details</h3>
+    <p>Bank Name: State Bank of India (SBI)</p>
+    <p>Account Number: 43154367102</p>
+    <p>IFSC Code: SBIN0020106</p>
+    <p>Account Holder Name: TechKnow Foundation</p>
+    <p>Branch: ICRISAT Branch</p>
+  </div>
+</div>
+
+<script>
+  // Function to open the popup
+  function openPopup() {
+    document.getElementById("popup").style.display = "block";
+  }
+  // Function to close the popup
+  function closePopup() {
+    document.getElementById("popup").style.display = "none";
+  }
+</script>
+</button>                                                                                      </p>
+			<p><strong>If you're interested in contributing resources, services, or expertise to support our cause, please click below to explore alternative donation options.</strong></p>
+					
+		</div>
+		<button
+  style="box-shadow: inset 0 4px 4px 0 rgb(2 6 23 / 0.3), inset 0 -2px 4px 0 rgb(203 213 225);"
+  class="inline-flex cursor-pointer items-center gap-1 rounded border border-slate-300 bg-gradient-to-b from-slate-50 to-slate-200 px-4 py-2 font-semibold hover:opacity-90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-300 focus-visible:ring-offset-2 active:opacity-100"
+> <a href="https://forms.gle/pLbBvFNzsFkXYqEb9" target="_blank" class="inline-flex cursor-pointer items-center gap-1 rounded border border-slate-300 bg-gradient-to-b from-slate-50 to-slate-200 px-4 py-2 font-semibold hover:opacity-90 focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-slate-300 focus-visible:ring-offset-2 active:opacity-100">
+
+  Proceed
+  </button>
+        
+        
+    </div>
+    <div class="footer">
+        <p>© 2024 TechKnow Foundation. All rights reserved.</p>
+    </div>
+</body>
+</html>

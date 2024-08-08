@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TechKnow Foundation - Home</title>
+    <style>
+        #slider {
+    overflow: hidden;
+}
+#slider figure {
+    position: relative;
+    width: 150%;
+    margin: 10;
+    left: 20;
+    padding-left: 1px;
+    animation: 15s slider infinite;
+}
+#slider figure img {
+    float: left;
+    padding-left: 5px;
+    padding-right: 18px;
+    width: 50%;
+}
+#slider a {
+    position: relative;
+    display: inline-block;
+    width: 20%;
+    margin: 5px;
+    text-decoration: none;
+}
+#slider a img {
+    width: 100%;
+    vertical-align: middle;
+}
+#slider a .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 1rem;
+    text-align: center;
+    padding: 1rem;
+    box-sizing: border-box;
+}
+#slider a:hover .overlay {
+    opacity: 1;
+}
+
+@keyframes slider {
+    0% { left: 0; }
+    20% { left: 0; }
+    25% { left: -100%; }
+    45% { left: -100%; }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.header {
+    text-align: right;
+    background: #4CAF50;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    position: relative;
+}
+.header h1 {
+    margin: 0;
+    text-align: center;
+    flex-grow: 1;
+}
+.header .tagline {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 0rem;
+    margin-left: 17rem;
+    text-align: center;
+    flex-grow: 1;
+}
+.p3 {
+    font-family: "Lucida Console", "Courier New", monospace;
+}
+.nav {
+    background: #333;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+.nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+.nav a:hover {
+    transition: 0.3s;
+    background-color: #ddd;
+    color: black;
+}
+.container {
+    padding: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    flex: 1;
+}
+
+.slider-image{
+    height: 180px;
+    width: 240px;
+}
+
+.section {
+    margin-bottom: 2rem;
+}
+.section h2 {
+    color: #333;
+    border-bottom: 2px solid #4CAF50;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+.contact-info {
+    margin-top: 1.5rem;
+}
+.contact-info p {
+    margin: 0.5rem 0;
+}
+.logo {
+    position: absolute;
+    top: 0.5rem;
+    left: 0.5rem;
+    width: 120px;
+}
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+a {
+    color: #4CAF50;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+.footer {
+    background: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+}
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="C:\Users\techk\OneDrive\Desktop\New Files\LOGO (1).png" alt="TechKnow Foundation Logo" class="logo">
+        <div>
+            <h1>TechKnow Foundation</h1>
+            <div class="tagline p3"><strong>Igniting minds, Empowering lives</strong></div>
+        </div>
+    </div>
+    <div class="nav">
+        <a href="./HOME PAGE.html">Home</a>
+        <a href="./Projects.html">Projects</a>
+        <a href="./Contact Us.html">Contact Us</a>
+        <a href="./Support Us.html">Support</a>
+    </div>
+    <div class="container">
+		<div class="section">
+            <h2>Glad you're here!</h2>
+            <p><strong>The TechKnow Foundation is a Non-Government Organization established in October 2023. We build bridges between the tech world and the real world .we work to empower Individuals and Communities by providing access to Technology Education ,resources, and opportunities also we address food insecurity in our community and ensure that everyone has the access to at least a onetime leave.</strong></p>
+		</div>
+        
+        
+        <div id="slider">
+            <h2>Our Recent Events</h2>
+            <a href="https://www.instagram.com/p/C7tt63VSkWR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+                <img src="./re4.jpg" alt="Instagram Post">
+                <div class="overlay">Click here for more details</div>
+            </a>
+            <a href="https://www.instagram.com/p/C5_XENIyXen/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+                <img src="./re2.jpg" alt="Instagram Post">
+                <div class="overlay">Click here for more details</div>
+            </a>
+            <a href="https://www.instagram.com/p/C5nr0ApyhZl/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+                <img src="./Re1.jpg" alt="Instagram Post">
+                <div class="overlay">Click here for more details</div>
+            </a>
+            <a href="https://www.instagram.com/p/C6T0GpRy9UR/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" target="_blank">
+                <img src="./re3.jpg" alt="Instagram Post">
+                <div class="overlay">Click here for more details</div>
+            </a>
+        </div>
+        <div class="section">
+            <h2>Mission</h2>
+            <p>At TechKnow Foundation, our primary aim is to empower the next generation with the essential knowledge and skills to navigate the digital world safely and effectively. Through our initiatives, we are committed to raising cyber safety awareness and enhancing computer literacy among school students across the state. We focus on educating students about cyber safety practices, helping them understand potential online threats and how to protect themselves in the digital environment. Additionally, we aim to bridge the digital divide by providing comprehensive computer literacy programs in rural government schools, ensuring that every child, regardless of their geographic location, has access to quality computer education.</p>
+        </div>
+		<div class="section">
+            <h2>Vision</h2>
+            <p>Our vision is a future where every individual is well-versed in cyber safety practices and possesses the digital literacy necessary to thrive in the modern world. We aspire to reach every corner of the state, ensuring that no student is left behind in understanding the importance of cyber safety and computer literacy. Through our combined efforts, we foresee a community where awareness and proactive measures against cyber threats are commonplace. We envision a world where digital literacy is universal, and every child has the opportunity to leverage technology for their growth and success.</p>
+        </div>
+		
+		
+    </div>
+    <div class="footer">
+        &copy; 2024 TechKnow Foundation. All rights reserved.
+    </div>
+</body>
+</html>

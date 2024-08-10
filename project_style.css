@@ -5,7 +5,7 @@
     margin: 0;
     padding: 0;
     border: 0;
-    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family:"Poppins", sans-serif;
     box-sizing: border-box;
 }
 body{
@@ -47,7 +47,7 @@ nav{
 .logo>h2{
     text-align: center;
     text-transform: uppercase;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-family: "Merriweather", serif;
 }
 .logo>span{
@@ -64,7 +64,7 @@ nav{
     list-style: none;
     display: flex;
     margin-right: 20px;
-    background: rgba(200, 0, 200, 0.4);
+    background: rgba(200, 0, 200, 0.6);
 }
 /* .menu-items>li{
     margin: 0 20px;
@@ -124,17 +124,42 @@ nav button{
 main{
     width: 100vw;
     flex-grow: 1;
-
+    
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-.container{
-    
+section{
+    display: flex;
     width: 60%;
-    min-width: 320px;
-    padding: 20px;
-    border-radius: 10px;
+    gap: 2rem;
+    min-width: 750px;
+    margin: 5rem 0;
+    align-items: center;
+    
+}
+section img{
+    border-radius: 2.5rem;
+    height: 350px
+}
+section div h1{
+     
+    padding: 1rem 0;  
+    
+    margin-bottom: 1.2rem; 
+    font-size: 2.5rem;
+    border-bottom: solid;
+}
+section div p{
+    font-size: 1.1rem;
+    font-weight: 500;
+    text-align: left;
+    color: rgba(0, 0, 0, 0.6);
+    word-spacing: 0.3rem;
+}
+#mission{
+    flex-direction: row-reverse;
 }
 #logo{
     height: 200px;
@@ -147,51 +172,59 @@ footer{
    color: white;
     background-color: #698474;
 }
-.contacts{
-    display: flex;
-    color: #a37859;
-    flex-direction: column;
-    text-align: center;
-    max-width: 450px;
-    margin: auto;
-    margin-top: 20px;
-    
+.slider{
+    width: 80vw;
+    margin:  0;
+    max-width: 800px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) ;
+    /* grid-template-rows: minmax(1fr) minmax(1fr); */
+    gap: 1.2rem;
 }
-.contacts>a{
+.event-image{
+    margin: 1.2rem;
+    transition: all 0.3s;
     display: block;
+    border: solid gray 1px;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 3px 3px 15px ;
+    height: 100%;
+    background-color: white;
+    /* padding: 2rem; */
+}
+.event-image>img{
     width: 100%;
+    transition: all 0.5s;
+}
+.event-image:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+
+}
+.event-image>p{
+    padding: 1.5rem;
+}
+.slider a{
     text-decoration: none;
     color: inherit;
 }
-.contacts>a:hover{
-    background-color: rgba(105, 132, 116, 0.2);
-    /* color: white; */
+
+.btn{
+    padding: 1rem;
+    border-radius: 1rem;
+    font-size: 0.9rem;
+    width: 100%;
+    font-weight: 600;
+    border: solid;
+    background-color: white;
+    cursor: pointer;
+    transition: all 0.3s;
 }
-.contacts>a>p{
-    border-bottom: solid 2px #DCA47C;
-    padding: 20px 0;
-}
-.socials{
-    display: flex;
-    justify-content: center;
-    border: solid #698474;
-    max-width: 300px;
-    margin: auto;
-    padding: 5px 10px;
-    border-radius: 15px;
-    background-color: rgba(105, 132, 116, 0.4);
-}
-.socials>a{
-    padding: 10px;
-    margin: 0 10px;
-    border-bottom: solid rgba(105, 132, 116, 0.4);
-}
-.socials>a:hover{
-    border-radius: 15px;
-    border-bottom: solid;
-}
-.socials>a>img{
-    height: 30px;    
+.btn:hover{
+    background-color: #677D6A;
+    color: white;
+    border: #677D6A solid;
 }
 @media screen and (max-width: 850px) {
     .menu-items{
@@ -201,10 +234,11 @@ footer{
     }
     nav button{
         display: block;
-        background-color: rgba(200, 0, 200, 0.6);
+        /* background-color: rgba(200, 0, 200, 0.6); */
+        background-color: inherit;
     }
     nav button:hover{
-        background-color: #c5936f;
+        background-color: rgba(200, 0, 200, 0.6);
         cursor: pointer;
         transition: ease-in-out 0.4s;
         color: #c5936f;
@@ -235,8 +269,30 @@ footer{
     nav ul li{
         width: 100%;
     }
+    section{
+        flex-direction: column;
+        align-items: center;
+        width: auto;
+        width: 80%;
+        min-width: 320px;
+        margin: 3rem 0;
+        text-align: center;
+    }
+    #mission{
+        flex-direction: column;
+    }
+    section img{
+        height: auto;
+        max-width: 350px;
+        width: 100%;
+    }
     #logo{
         height: 150px;
         
+    }.slider{
+        width: 80vw;
+        max-width: 600px;
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
     }
 }

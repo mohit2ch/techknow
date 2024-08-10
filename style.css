@@ -116,7 +116,7 @@ nav button{
     display: none;
     color: #D6EFD8;
     padding: 10px;
-    background-color: rgba(200, 0, 200, 0.4);
+    /* background-color: rgba(200, 0, 200, 0.4); */
     border-radius: 50%;
     height: 50px;
     width: 50px;
@@ -139,6 +139,9 @@ section{
     align-items: center;
     
 }
+.logo-img{
+    height: 300px;
+}
 section img{
     border-radius: 2.5rem;
     height: 350px
@@ -152,10 +155,11 @@ section div h1{
     border-bottom: solid;
 }
 section div p{
-    font-size: 1rem;
+    font-size: 1.1rem;
     font-weight: 500;
-    text-align: justify;
+    text-align: left;
     color: rgba(0, 0, 0, 0.6);
+    word-spacing: 0.3rem;
 }
 #mission{
     flex-direction: row-reverse;
@@ -181,7 +185,7 @@ footer{
 }
 .event-image{
     margin: 1.2rem;
-    transition: all;
+    transition: all 0.3s;
     display: block;
     border: solid gray 1px;
     border-radius: 1rem;
@@ -191,7 +195,7 @@ footer{
 }
 .event-image>img{
     width: 100%;
-    
+    transition: all 0.5s;
 }
 .event-image:hover{
     cursor: pointer;
@@ -214,12 +218,17 @@ footer{
         overflow: hidden;
         transition: ease-in-out;
     }
+    .logo-img{
+        width: 80vw;
+        height: auto;
+    }
     nav button{
         display: block;
-        background-color: rgba(200, 0, 200, 0.6);
+        /* background-color: rgba(200, 0, 200, 0.6); */
+        background-color: inherit;
     }
     nav button:hover{
-        background-color: #c5936f;
+        background-color: rgba(200, 0, 200, 0.6);
         cursor: pointer;
         transition: ease-in-out 0.4s;
         color: #c5936f;
